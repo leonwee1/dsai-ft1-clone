@@ -75,7 +75,7 @@ import requests
 
 @app.route("/telegram",methods=["GET","POST"])
 def telegram():
-    domain_url = 'https://dsat-ft1-module5.onrender.com'
+    domain_url = 'https://dsai-ft1-clone.onrender.com'
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 
@@ -128,7 +128,7 @@ def webhook():
 
 @app.route("/stop_telegram",methods=["GET","POST"])
 def stop_telegram():
-    domain_url = 'https://dsat-ft1-module5.onrender.com'
+    domain_url = 'https://dsai-ft1-clone.onrender.com'
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 
@@ -143,7 +143,7 @@ def stop_telegram():
         status = "Failed to stop the telegram bot. Please check the logs."
 
     return(render_template("telegram.html", status=status))
-    
+
 if __name__ == "__main__":
     app.run()
 
